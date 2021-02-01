@@ -1,0 +1,44 @@
+.main-footer:before {
+    content: "";
+    position: absolute;
+    background: bottom right no-repeat;
+    background-image: url(/wp-content/themes/narvikgaarden/assets/images/narvik-kommune-pattern.svg);
+    bottom: 0;
+    background-size: 60%;
+    //right: -12.5%;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-footer {
+    //background: #002e47;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    //padding: 4rem 0 0;
+    position: relative;
+    z-index: 1;
+    h4{
+      font-weight: 200;
+      //font-size: 1rem;
+      line-height: 150%;
+      font-family: var(--font-secondary);
+
+
+    }
+    p{
+      font-weight: 200;
+      font-size: 1rem;
+      line-height: 150%;
+      font-family: var(--font-primary);
+
+    }
+}
+@media (min-width: 720px){
+.main-footer {
+    //padding: 6rem 0 0;
+}
+}

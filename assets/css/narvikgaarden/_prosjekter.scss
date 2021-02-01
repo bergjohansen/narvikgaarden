@@ -1,0 +1,30 @@
+.prosjekt{
+  //box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.prosjekt p{
+  font-weight: 300;
+  line-height: 150%;
+  margin-bottom: 2rem;
+  a {
+    background-repeat: no-repeat;
+    will-change: background-size;
+    transition: background-size .3s var(--ease-in-out);
+
+    padding: var(--space-xxxxs) 0;
+    background-image: linear-gradient(alpha(var(--color-primary), 0.2), alpha(var(--color-primary), 0.2));
+    background-size: 0% 100%;
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}
+
+
+
+body.prosjekter-template-default .feature-v5__content {
+  background-color: var(--color-white);
+  border-bottom:  1px solid var(--color-bg);
+  //color:var(--color-white);
+  //padding-bottom: calc(var(--feature-content-media-gap) + var(--feature-media-offset));
+}

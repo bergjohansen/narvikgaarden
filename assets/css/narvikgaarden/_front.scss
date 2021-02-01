@@ -1,0 +1,21 @@
+.hero{
+  //box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+}
+.hero p{
+  font-weight: 200;
+  line-height: 150%;
+  margin-bottom: 2rem;
+  a {
+    background-repeat: no-repeat;
+    will-change: background-size;
+    transition: background-size .3s var(--ease-in-out);
+
+    padding: var(--space-xxxxs) 0;
+    background-image: linear-gradient(alpha(var(--color-primary), 0.2), alpha(var(--color-primary), 0.2));
+    background-size: 0% 100%;
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}

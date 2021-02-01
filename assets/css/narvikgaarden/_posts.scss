@@ -1,0 +1,7 @@
+
+
+body.post-template-default .feature-v5__content {
+  //background-color: var(--color-contrast-lower);
+  background-color: var(--color-white);
+  padding-bottom: calc(var(--feature-content-media-gap) + var(--feature-media-offset));
+}

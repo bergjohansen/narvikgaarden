@@ -1,0 +1,52 @@
+li.page_item {
+				a{
+					/*	padding: var(--space-sm) var(--space-sm);
+						letter-spacing: inherit;
+						justify-content: flex-start;
+						color: grey;
+						text-decoration: none;*/
+						//padding: var(--space-xxxs);
+							line-height: 2rem;
+
+
+						color: grey;
+						text-decoration: none;
+						position: relative;
+						display: inline-flex;
+
+				&:before {
+			    content:"\007C";
+					//content:"\2014C";
+					//padding: var(--space-sm) var(--space-sm);
+					//display:contents;
+					color:var(--color-contrast-low);
+					padding-right: 15px;
+						line-height: 150%;
+						margin-left: -2px;
+
+					font-weight: normal;
+					}
+			&:hover{
+				text-decoration: none;
+				color:var(--color-contrast-high);
+			}
+				}
+}
+
+ul.children > li.current_page_item{
+	a{
+		color: var(--color-primary);
+		position: relative;
+		display: inline-flex;
+
+	&:before {
+	content:"\007C";
+	color: var(--color-primary);
+	padding-right: 15px;
+	text-decoration: none;
+	font-weight: normal;
+	margin-left: -2px;
+
+}
+}
+}
