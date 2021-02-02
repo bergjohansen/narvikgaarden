@@ -29,7 +29,7 @@
 
         <div class="main-footer__colophon  padding-top-xs margin-top-lg">
             <div class="text-sm text-xs@md color-contrast-medium flex flex-wrap gap-xs">
-                <?php the_field( 'sub_footer_content', 'option' ); ?>
+                Test<?php the_field( 'sub_footer_content', 'option' ); ?>
             </div>
         </div>
     </div>
