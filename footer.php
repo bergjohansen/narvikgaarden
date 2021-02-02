@@ -29,6 +29,7 @@
 
         <div class="main-footer__colophon  padding-top-xs margin-top-lg">
             <div class="text-sm text-xs@md color-contrast-medium flex flex-wrap gap-xs">
+                <p><span><?php echo get_bloginfo(); ?> © <?php echo date('Y'); ?></span> · <span><a href="/personvernvilkar/">Personvernerklæring</a></span> ·<span>Design &amp; utvikling: <a href="https://riktigspor.no/" target="_blank">Riktig Spor</a></span></p>
                 <?php the_field( 'sub_footer_content', 'option' ); ?>
             </div>
         </div>
