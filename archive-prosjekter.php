@@ -100,17 +100,17 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
               <?php if (get_field( 'ingress')): ?>
               <span class="prosjekt"><?php the_field( 'ingress' ); ?></span>
               <?php endif; ?>
-              <p>
-              <?php
-               $trim_length = 30;  //desired length of text to display
-               $value_more = '...'; // what to add at the end of the trimmed text
-               $custom_field = 'project_intro';
-               $value = get_post_meta($post->ID, $custom_field, true);
-                if ($value) {
-                   echo wp_trim_words( $value, $trim_length, $value_more);
-                }
-                ?>
-              </p>
+              <p class="text-base font-normal color-contrast-higher margin-bottom-xxs line-height-lg">
+                <?php
+                 $trim_length = 30;  //desired length of text to display
+                 $value_more = '...'; // what to add at the end of the trimmed text
+                 $custom_field = 'project_text';
+                 $value = get_post_meta($post->ID, $custom_field, true);
+                  if ($value) {
+                     echo wp_trim_words( $value, $trim_length, $value_more);
+                  }
+                  ?>
+                </p>
               <a class="btn btn--accent btn--primary" href="<?php the_permalink(); ?>" target="">Les mer</a>
             </div>
           </div>
