@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Front
+ * Template name: Forside-mal
  *
  */
 ?>
