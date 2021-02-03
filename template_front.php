@@ -142,18 +142,6 @@
                             <?php if (get_field( 'ingress' )): ?>
                               <p><?php the_field( 'ingress' ); ?></p>
                             <?php endif; ?>
-
-                            <p><?php
-                             $trim_length = 30;  //desired length of text to display
-                             $value_more = '...'; // what to add at the end of the trimmed text
-                             $custom_field = 'tekst';
-                             $value = get_post_meta($post->ID, $custom_field, true);
-                              if ($value) {
-                                 echo wp_trim_words( $value, $trim_length, $value_more);
-                              }
-                              ?>
-                              </p>
-
                             <p><a class="btn btn--subtle" href="<?php the_permalink(); ?>">Les saken</a>
                             </p>
                         </div>
