@@ -28,7 +28,6 @@
           if( !empty( $featured_image ) ): ?>style="background-image: url('<?php echo $featured_image[0]; ?>');"<?php endif; ?>>
             <div class="card-v9__content padding-md">
               <div class="padding-bottom-xxxl max-width-xxs">
-                <p class="text-sm color-contrast-higher color-opacity-80% margin-bottom-xxs"><?php the_time( 'j. M Y' ); ?></p>
                 <h2 id="card-title-1" class="text-lg has-text-shadow"><?php the_title(); ?></h2>
               </div>
 
@@ -54,7 +53,6 @@
           if( !empty( $featured_image ) ): ?>style="background-image: url('<?php echo $featured_image[0]; ?>');"<?php endif; ?>>
             <div class="card-v9__content padding-md">
               <div class="padding-bottom-xxxl max-width-xxs">
-                <p class="text-sm color-contrast-higher color-opacity-80% margin-bottom-xxs"><?php the_time( 'j. M Y' ); ?></p>
                 <h2 id="card-title-2" class="text-lg has-text-shadow"><?php the_title(); ?></h2>
               </div>
 
@@ -81,7 +79,6 @@
         if( !empty( $featured_image ) ): ?>style="background-image: url('<?php echo $featured_image[0]; ?>');"<?php endif; ?>>
           <div class="card-v9__content padding-md">
             <div class="padding-bottom-xxxl max-width-xxs">
-              <p class="text-sm color-contrast-higher color-opacity-80% margin-bottom-xxs"><?php the_time( 'j. M Y' ); ?></p>
               <h2 id="card-title-1" class="text-lg has-text-shadow"><?php the_title(); ?></h2>
             </div>
 
@@ -107,7 +104,6 @@
         if( !empty( $featured_image ) ): ?>style="background-image: url('<?php echo $featured_image[0]; ?>');"<?php endif; ?>>
           <div class="card-v9__content padding-md">
             <div class="padding-bottom-xxxl max-width-xxs">
-              <p class="text-sm color-contrast-higher color-opacity-80% margin-bottom-xxs"><?php the_time( 'j. M Y' ); ?></p>
               <h2 id="card-title-2" class="text-lg has-text-shadow"><?php the_title(); ?></h2>
             </div>
 

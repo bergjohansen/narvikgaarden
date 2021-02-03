@@ -138,7 +138,6 @@
                       <?php endif; ?>
                         <div class="text-component">
                             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                            <!--<p class="text-sm color-contrast-medium margin-bottom-sm"><?php the_time( 'j. M Y' ); ?></p>-->
                             <?php if (get_field( 'ingress' )): ?>
                               <p><?php the_field( 'ingress' ); ?></p>
                             <?php endif; ?>
