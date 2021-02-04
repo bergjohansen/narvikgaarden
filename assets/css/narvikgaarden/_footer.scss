@@ -29,13 +29,14 @@
 
 
     }
-    p{
+    p,span{
       font-weight: 200;
       font-size: 1rem;
       line-height: 150%;
       font-family: var(--font-primary);
 
     }
+
 }
 @media (min-width: 720px){
 .main-footer {
@@ -47,5 +48,15 @@
   p{
     //font-size: var(--text-sm);
     font-size: 12px;
+    a{
+      color: var(--color-contrast-medium);
+
+      &:hover{
+        color: var(--color-contrast-high);
+        text-decoration: underline;
+      }
+    }
+
   }
+
 }
