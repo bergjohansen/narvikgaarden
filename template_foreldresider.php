@@ -13,7 +13,9 @@
         <div class="grid max-width-adaptive gap-xl">
           <div class="col">
               <h1 class="text-xxxl font-normal text-center color-primary"><?php the_title(); ?></h1>
-              <p></p>
+              <?php if (get_field( 'ingress' )): ?>
+                <div class="text-component text-left line-height-lg margin-bottom-md font-bold"><?php the_field( 'ingress' ); ?></div>
+              <?php endif; ?>
           </div>
         </div>
     </div>
