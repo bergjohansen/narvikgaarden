@@ -1,5 +1,8 @@
 # dependencies
 node_modules/
 /node_modules
-
+/_delete
+/_notes
+/assets/css/_notes
+/assets/images/_notes
 .DS_Store
