@@ -20,20 +20,27 @@
     </div>
     <div class="container max-width-adaptive-sm margin-bottom-sm">
         <div class="grid max-width-adaptive gap-xl">
-          <div class="col">
+          <div class="col-6">
               <h1 class="text-xxxl font-normal color-primary"><?php the_title(); ?></h1>
-              <div class="text-component padding-y-md">
-                <?php the_content(); ?>
-                <?php if (get_field( 'tekst' )): ?>
-                  <div class="text-component v-space-md line-height-lg font-normal">
-                    <?php the_field( 'tekst' ); ?>
-                  </div>
-                <?php endif; ?>
-              </div>
           </div>
-        </div>
     </div>
   </div>
+  <div class="container max-width-adaptive-lg margin-y-md">
+      <div class="grid max-width-adaptive gap-xl text-component ">
+        <?php if( have_rows('bokser') ): ?>
+            <?php while( have_rows('bokser') ): the_row(); ?>
+              <div class="col-6@xs col-4@sm  col-3@md col-3@lg padding-x-0@xs padding-x-lg">
+                <h3 class="text-base font-bold line-height-heading"><?php the_sub_field('tittel'); ?></h3>
+                <?php
+                $sub_field_3 = get_sub_field('innhold');
+                ?>
+                <span class="text-sm line-height-lg"><?php the_sub_field('innhold'); ?></span>
+              </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+        </div>
+      </div>
+    </div>
 
 
   <?php $utvalgte_ansatte = get_field( 'utvalgte_ansatte' ); ?>
@@ -77,8 +84,6 @@
     </div>
     <?php wp_reset_postdata(); ?>
   <?php endif; ?>
-
-
 </section>
 
 <?php get_footer(); ?>
