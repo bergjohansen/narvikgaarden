@@ -1,0 +1,18 @@
+.card-v9B {
+  display: block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  //box-shadow: var(--shadow-sm);
+  transition: .3s;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}

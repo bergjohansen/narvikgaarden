@@ -1,86 +1,60 @@
 <?php
 /**
- * Template name: Side med undersider
+ * Template name: Sider med undersider
  *
  */
 ?>
 
 <?php get_header(); ?>
 
-<section class="padding-bottom-md" data-theme="blue">
-  <div class="padding-top-xs padding-bottom-lg">
-    <div class="container max-width-adaptive-lg margin-bottom-xl">
-      <?php
-        if (function_exists('bcn_display')) {
-          echo '<nav class="breadcrumbs text-xs" aria-label="Breadcrumbs"><div class="breadcrumbs__content text-base color-contrast-higher color-opacity-50% margin-bottom-xxs">';
-          echo bcn_display();
-          echo '</div></nav>';
-        }
-      ?>
-    </div>
-
+<section class="feature-v8 padding-bottom-xl" data-theme="white">
+  <div class="feature-v8__main-content bg-white padding-top-xxl">
     <div class="container max-width-adaptive-sm margin-bottom-sm">
         <div class="grid max-width-adaptive gap-xl">
           <div class="col">
-              <h1 class="text-xxxl font-normal color-primary text-center"><?php the_title(); ?></h1>
-              <div class="text-component padding-y-md">
-                <?php the_content(); ?>
-                <?php if (get_field( 'section_1' )): ?>
-                  <div class="text-component v-space-md line-height-lg font-normal">
-                    <?php the_field( 'section_1' ); ?>
-                  </div>
-                <?php endif; ?>
-              </div>
+              <h1 class="text-xxxl font-normal text-center color-primary"><?php the_title(); ?></h1>
           </div>
         </div>
     </div>
   </div>
-</section>
 
-<?php
-    $parents = get_post_ancestors( $post->ID );
-    $parent_id = ($parents) ? $parents[count($parents)-1]: $post->ID;
+  <div class="container max-width-adaptive-lg feature-v8__sub-content">
+    <ul class="feature-v8__sub-content grid gap-lg">
+        <?php
+        $args = array(
+          'post_type' => 'page',
+          'post_parent' => $post->ID,
+          'orderby' => 'menu_order',
+          'paged' => $paged
+        );
+        $myposts = get_posts( $args );
 
-    $children = wp_list_pages( array(
-      'title_li' => '',
-      'child_of' => $parent_id,
-      'echo'     => 0
-    ));
-  ?>
-  <?php if ($children): ?>
-    <aside class="page__content__sidebar">
-      <h2>
-        <a href="<?php echo get_permalink( $parent_id ); ?>">
-          <?php $parent_title = get_the_title($parent_id); echo $parent_title; ?>
-        </a>
-      </h2>
-      <ul class="page__content__sidebar__list">
-        <?php echo $children; ?>
-      </ul>
-    </aside>
-  <?php endif; ?>
+        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+        <li class="col-4@md">
+          <a href="<?php the_permalink(); ?>" class="radius-lg card-v9B">
+            <?php
+            $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'card' );
+            if( !empty( $featured_image ) ): ?>
+            <figure>
+              <img src='<?php echo $featured_image[0]; ?>' alt='<?php echo esc_attr($image['alt']); ?>' class='block width-100% img-rounded'>
+            </figure>
+            <?php else: ?>
+              <figure>
+                <img class='block width-100% img-rounded' src="<?php echo get_template_directory_uri(); ?>/assets/images/Bompengeselskap_Nord_logo_ensfarget.png" alt="<?php echo $image['alt'] ?>" />
+              </figure>
+            <?php endif; ?>
+            <footer class="padding-sm">
 
-
-<?php if (get_field( 'section_2' )): ?>
-  <section class="padding-bottom-md" data-theme="attention">
-  <div class="container max-width-adaptive-sm padding-y-md" >
-      <div class="grid max-width-adaptive gap-xl">
-        <div class="col">
-            <div class="text-component padding-y-md">
-
-                <div class="text-component v-space-md line-height-lg font-normal">
-                  <?php the_field( 'section_2' ); ?>
-                </div>
-
-            </div>
-        </div>
-      </div>
+              <div class="text-component">
+                <h4><span class="card-v8__title"><?php the_title(); ?></span></h4>
+              </div>
+            </footer>
+          </a>
+        </li>
+      <?php endforeach;
+      wp_reset_postdata();?>
+    </ul>
   </div>
-  </section>
-  <?php endif; ?>
-
-
-
-
+</section>
 
 <?php get_footer(); ?>
