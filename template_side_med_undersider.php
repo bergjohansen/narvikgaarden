@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Sider med undersider
+ * Template name: Foreldresider
  *
  */
 ?>
@@ -13,6 +13,7 @@
         <div class="grid max-width-adaptive gap-xl">
           <div class="col">
               <h1 class="text-xxxl font-normal text-center color-primary"><?php the_title(); ?></h1>
+              <p></p>
           </div>
         </div>
     </div>
@@ -40,7 +41,7 @@
             </figure>
             <?php else: ?>
               <figure>
-                <img class='block width-100% img-rounded' src="<?php echo get_template_directory_uri(); ?>/assets/images/Bompengeselskap_Nord_logo_ensfarget.png" alt="<?php echo $image['alt'] ?>" />
+                <img class='block width-100% img-rounded' src="<?php echo get_template_directory_uri(); ?>/assets/images/narvik-kommune-pattern.svg" alt="<?php echo $image['alt'] ?>" />
               </figure>
             <?php endif; ?>
             <footer class="padding-sm">
