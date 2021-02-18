@@ -69,7 +69,7 @@ add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1); // Remove Na
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 //add_filter('style_loader_tag', 'html_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
-add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+//add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 add_filter('acf/settings/remove_wp_meta_box', '__return_true'); // Speed up site with ACF
 
 // Remove Filters

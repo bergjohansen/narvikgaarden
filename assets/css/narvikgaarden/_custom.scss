@@ -6,7 +6,7 @@
   margin: 0 auto;
 
 }
-
+.container p img,
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -44,6 +44,7 @@ th, td {
 .innhold img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
  .download-attachments{
