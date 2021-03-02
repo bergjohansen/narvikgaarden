@@ -90,17 +90,19 @@
               $link = get_sub_field('shortcut_link2');
               $color = get_sub_field('shortcut_color');
             ?>
-            <a href="<?php echo $link; ?>" data-theme="<?php if( $color ): ?><?php echo $color; ?><?php else: ?>attention<?php endif; ?>" class="card-v9 card-v9--overlay-bg radius-lg col-6@md" aria-labelledby="<?php echo $label; ?>" aria-label="Link description" style="background-image: url('<?php if( $image_url ): ?><?php echo $image_url; ?><?php endif; ?>');" >
-                <div class="card-v9__content padding-md">
+            <a href="<?php echo $link; ?>" data-theme="<?php if( $color ): ?><?php echo $color; ?><?php else: ?>attention<?php endif; ?>" class="card-v9  radius-lg col-6@xs col-4@sm  col-4@md col-4@lg" aria-labelledby="<?php echo $label; ?>" aria-label="Link description" style="background:linear-gradient( 180deg, #00000088 30%, #ffffff44 100%), url('<?php if( $image_url ): ?><?php echo $image_url; ?><?php endif; ?>');" >
+                <div class="card-v9__content radius-lg padding-sm">
                     <div class="padding-bottom-xl max-width-xxs">
                         <p class="text-sm color-contrast-higher color-opacity-50% margin-bottom-xxs"><?php echo $label; ?></p>
-                        <h2 id="card-title-1" class="text-xl"><?php echo $content; ?></h2>
+                        <h2 id="card-title-1" class="text-md"><?php echo $content; ?></h2>
                     </div>
                     <div class="margin-top-auto">
                         <span class="card-v9__btn"><i>Les mer</i></span>
                     </div>
                 </div>
             </a>
+
+
           <?php endwhile; ?>
 
         </div>
@@ -125,7 +127,7 @@
                 $myposts = get_posts( $args );
                 foreach ( $myposts as $post ): setup_postdata( $post );
                 ?>
-                <div class="col-4@md">
+                <div class="col-6@xs col-4@sm  col-4@md col-4@lg">
                     <div class="feature-v6__item">
                       <?php
                       $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'preview' );

@@ -24,6 +24,7 @@
   if( !empty( $featured_image ) ): ?>
     <figure class="feature-v5__media container max-width-adaptive-lg">
       <img src='<?php echo $featured_image[0]; ?>' alt='<?php echo esc_attr($image['alt']); ?>' class='full-bleed radius-lg'>
+        <div class="credit_text text-right opacity-70%"><?php the_post_thumbnail_caption(); ?></div>
     </figure>
   <?php endif; ?>
 </section>

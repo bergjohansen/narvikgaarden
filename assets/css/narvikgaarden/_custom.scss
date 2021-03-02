@@ -71,3 +71,45 @@ ul.da-attachments-list{
 a.prod-card__img-link:hover{
   cursor: auto;
 }
+
+.alignright{float: right;margin-left: 1rem;}
+.alignleft{float: left;margin-right: 1rem;}
+
+.margin--negative{
+  margin-top: -1rem;
+  position: absolute;
+  z-index: 99;
+}
+
+// foto av
+.credit{
+  position: absolute;
+  bottom: -50px;
+  right: 10px;
+}
+@media (max-width: 1024px) {
+  .credit{
+    bottom: -20px;
+  }
+}
+
+.credit_text {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.bg_overlay,
+.bg-overlay{
+  //background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi") !important;
+  //background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("https://bit.ly/2rlzaXi") !important; /* The least supported option. */
+
+  background:  linear-gradient( 0deg, #00000088 30%, #ffffff44 100%);
+  /*background:  //linear-gradient( 0deg, #000000 30%, #ffffff 100%;
+  linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)
+    );
+  */
+}

@@ -29,6 +29,7 @@
     <ul class="feature-v8__sub-content grid gap-lg">
         <?php
         $args = array(
+          'posts_per_page' => -1,
           'post_type' => 'page',
           'post_parent' => $post->ID,
           'orderby' => 'menu_order',
