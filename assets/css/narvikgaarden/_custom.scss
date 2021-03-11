@@ -113,3 +113,12 @@ a.prod-card__img-link:hover{
     );
   */
 }
+
+.faktaboks{
+  p{
+    font-size: var(--text-sm);
+    color: var(--color-white);
+    line-height:var(--body-line-height);
+    margin-bottom: 1.5rem;
+  }
+}

@@ -94,6 +94,14 @@
                     <?php if ( $prospect_finn ) : ?>
                       <a href="<?php echo esc_url( $prospect_finn['url'] ); ?>" class="btn btn--suble" target="<?php echo esc_attr( $prospect_finn['target'] ); ?>"><?php echo $prospect_finn['title']; ?></a>
                     <?php endif; ?>
+
+
+
+                    <?php $prospect_intern = get_field( 'prospect_intern' ); ?>
+                    <?php if ( $prospect_intern ) : ?>
+                    	<a href="<?php echo esc_url( $prospect_intern['url'] ); ?>" class="btn btn--suble" target="<?php echo esc_attr( $prospect_intern['target'] ); ?>"><?php echo esc_html( $prospect_intern['title'] ); ?></a>
+                    <?php endif; ?>
+
                   </div>
                 </div>
               </div>
