@@ -68,10 +68,11 @@
             <li class="col-6@sm col-4@md js-filter__item radius-md card-v9B margin-bottom-lg" data-filter="<?php the_field( 'prospect_status' ); ?>">
               <div class="prod-card">
                   <?php $prospect_finn = get_field( 'prospect_finn' ); ?>
+                  <?php $prospect_intern = get_field( 'prospect_intern' ); ?>
                 <?php
                 $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'card' );
                 if( !empty( $featured_image ) ): ?>
-                <a class="radius-lg card-v9B" href="<?php echo esc_url( $prospect_finn['url'] ); ?>" aria-label="<?php the_title(); ?>">
+                <a class="radius-lg card-v9B" href="<?php if ( $prospect_finn ) : ?><?php echo esc_url( $prospect_finn['url'] ); ?><?php endif; ?><?php if ( $prospect_intern ) : ?><?php echo esc_url( $prospect_intern['url'] ); ?><?php endif; ?>" aria-label="<?php the_title(); ?>">
                   <figure>
                     <img src='<?php echo $featured_image[0]; ?>' alt='<?php echo esc_attr($image['alt']); ?>' class='block width-100% img-rounded'>
                   </figure>
@@ -83,7 +84,7 @@
 
                 <div class="padding-sm text-center">
 
-                  <h3><a class="color-inherit" href="<?php echo esc_url( $prospect_finn['url'] ); ?>"><?php the_title(); ?></a></h3>
+                  <h3><a class="color-inherit" href="<?php if ( $prospect_finn ) : ?><?php echo esc_url( $prospect_finn['url'] ); ?><?php endif; ?><?php if ( $prospect_intern ) : ?><?php echo esc_url( $prospect_intern['url'] ); ?><?php endif; ?>"><?php the_title(); ?></a></h3>
                   <div class="margin-top-xs">
                     <span class="prod-card__price">
                       <?php if (get_field( 'prospect_ingress' )): ?>
@@ -97,7 +98,7 @@
 
 
 
-                    <?php $prospect_intern = get_field( 'prospect_intern' ); ?>
+
                     <?php if ( $prospect_intern ) : ?>
                     	<a href="<?php echo esc_url( $prospect_intern['url'] ); ?>" class="btn btn--suble" target="<?php echo esc_attr( $prospect_intern['target'] ); ?>"><?php echo esc_html( $prospect_intern['title'] ); ?></a>
                     <?php endif; ?>

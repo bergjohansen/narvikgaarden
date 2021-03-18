@@ -64,7 +64,7 @@
                   <div class="margin-top-xs">
                     <span class="prod-card__price">
                       <?php if (get_field( 'report_ingress' )): ?>
-                          <div class="text-component text-left line-height-xl margin-bottom-md font-normal"><?php the_field( 'report_ingress' ); ?></div>
+                          <div class="text-left line-height-xl margin-bottom-md font-normal"><?php the_field( 'report_ingress' ); ?></div>
                       <?php endif; ?>
                       </span>
 

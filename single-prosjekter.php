@@ -10,12 +10,8 @@
         }
       ?>
     </div>
-    <div class="container max-width-adaptive-sm margin-bottom-sm">
-        <div class="grid max-width-adaptive gap-xl">
-          <div class="col">
-              <h1 class="text-xxxl font-normal color-primary"><?php the_title(); ?></h1>
-          </div>
-        </div>
+    <div class="container max-width-adaptive-md margin-bottom-sm">
+      <h1 class="text-xxxl text-center font-normal color-primary padding-x-sm"><?php the_title(); ?></h1>
     </div>
   </div>
 

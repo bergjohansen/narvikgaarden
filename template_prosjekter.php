@@ -81,7 +81,7 @@
                 </a>
                 <?php endif; ?>
 
-                <div class="padding-sm text-center">
+                <div class="padding-sm text-left">
                   <h3><a class="color-inherit" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
                   <div class="margin-top-xs">

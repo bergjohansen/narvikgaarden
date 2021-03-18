@@ -56,7 +56,7 @@
               <div class="text-component">
                 <h4><span class="card-v8__title"><?php the_title(); ?></span></h4>
                 <?php if (get_field( 'ingress' )): ?>
-                  <div class="text-component text-left line-height-lg margin-bottom-md font-normal"><?php the_field( 'ingress' ); ?></div>
+                  <div class="text-left line-height-lg margin-bottom-md font-normal"><?php the_field( 'ingress' ); ?></div>
                 <?php endif; ?>
               </div>
             </footer>
