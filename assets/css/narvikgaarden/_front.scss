@@ -19,3 +19,16 @@
     }
   }
 }
+
+@media (max-width: 720px){
+.header__container {
+    align-items: flex-end;
+    padding-bottom: 1rem;
+}
+  .header__logo img{
+    height: 60px;
+  }
+.hero p{
+  font-weight: 400;
+  }
+}

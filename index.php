@@ -11,11 +11,7 @@
       ?>
     </div>
     <div class="container max-width-adaptive-md margin-bottom-sm">
-
-
-              <h1 class="text-xxxl text-center font-normal color-primary padding-x-sm"><?php the_title(); ?></h1>
-
-
+      <h1 class="text-xxxl text-center font-normal color-primary padding-x-sm"><?php the_title(); ?></h1>
     </div>
   </div>
 

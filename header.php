@@ -30,6 +30,7 @@
 </head>
 
 <body <?php body_class(); ?> data-theme="default">
+<?php wp_body_open(); ?>
 <?php if (get_field( 'campaign', 'option' )): ?>
 	<!--Alert notice-->
 	<div class="pre-header padding-y-xs js-pre-header" data-theme="<?php the_field('color_theme' , 'option'); ?>">
@@ -45,7 +46,7 @@
 	</div>
 <?php endif; ?>
 
-	<!--pre header-->
+	
 	<header class="header position-relative js-header" data-theme="blue">
 	  <div class="header__container container max-width-lg">
 	    <div class="header__logo">
@@ -61,7 +62,7 @@
 
 	    <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
 	      <i class="header__trigger-icon" aria-hidden="true"></i>
-	      <span>Menu</span>
+	      <span>&nbsp;</span>
 	    </button>
 
 	    <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
