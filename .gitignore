@@ -1,10 +1,14 @@
 # dependencies
 node_modules/
-/node_modules
+/node_modules/
 /_delete
-/_temp
-/_notes
+/_temp/
+/_notes/
 /assets/css/_notes
 /assets/images/_notes
 /updraft
 .DS_Store
+_notes/dwsync.xml
+assets/js/_notes/dwsync.xml
+_notes/dwsync.xml
+_notes/dwsync.xml

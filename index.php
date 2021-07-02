@@ -79,7 +79,7 @@
     <?php endif; ?>
   </section>
 
-  <?php if( $intro_image['caption'] ): ?>
+<?php if( $intro_image['caption'] ): ?>
 <div class="credit">
 <div class="credit_text opacity-70%"><?php echo ($intro_image['caption']); ?></div>
 </div>
